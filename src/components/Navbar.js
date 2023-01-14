@@ -2,14 +2,33 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import Pic from '../Images/navbarlogo.svg'
+
+
+const StyledLink = styled(Link)`
+display: inline-block;
+  position: relative;
+  text-decoration:none;
+  color: white;
+  text-transform:uppercase;
+  border: .2rem solid white;
+  background-color: black;
+  padding:1rem;
+  transition: .2s;
+  margin-left:10%;
+  top: 7vh;
+  width: 12vw;
+  height: 3vh;
+  `
+
+
 const Navbar = () => {
   return (
     <Wrapper>
       <div>
         <img src={Pic}/>
-      <Link to='/'>Characters</Link>
-      <Link to='/ships'>Ships</Link>
-      <Link to='/planets'>Planets</Link>
+      <StyledLink to='/'>Characters</StyledLink>
+      <StyledLink to='/ships'>Ships</StyledLink>
+      <StyledLink to='/planets'>Planets</StyledLink>
       </div>
     </Wrapper>
   )
@@ -42,7 +61,7 @@ width: 20vw;
 height:40vh ;
 
 }
-Link{
+/* Link{
   display: inline-block;
   position: relative;
   text-decoration:none;
@@ -56,7 +75,7 @@ Link{
   top: 7vh;
   width: 12vw;
   height: 3vh;
-}
+} */
 a:hover{
   transform: scale(1.5);
   box-shadow: 6px 6px black;
