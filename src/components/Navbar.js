@@ -6,7 +6,7 @@ const Navbar = () => {
     <Wrapper>
       <div>
         <img src={Pic}/>
-      <a href='/characters'>Characters</a>
+      <a href='/'>Characters</a>
       <a href='/ships'>Ships</a>
       <a href='/planets'>Planets</a>
       </div>
