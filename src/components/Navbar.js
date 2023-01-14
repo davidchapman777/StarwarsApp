@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import Pic from '../Images/navbarlogo.svg'
 const Navbar = () => {
@@ -6,9 +7,9 @@ const Navbar = () => {
     <Wrapper>
       <div>
         <img src={Pic}/>
-      <a href='/'>Characters</a>
-      <a href='/ships'>Ships</a>
-      <a href='/planets'>Planets</a>
+      <Link to='/'>Characters</Link>
+      <Link to='/ships'>Ships</Link>
+      <Link to='/planets'>Planets</Link>
       </div>
     </Wrapper>
   )
@@ -41,7 +42,7 @@ width: 20vw;
 height:40vh ;
 
 }
-a{
+Link{
   display: inline-block;
   position: relative;
   text-decoration:none;
