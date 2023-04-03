@@ -21,27 +21,30 @@ const Wrapper = styled.div`
 position: relative;
 display: inline-block;
 padding: 0;
+top: -12vh;
 .blade{
     position: absolute;
-    left: 15vw;
+    left: 13vh;
+    top: 1vh;
 }
 .s{
     display: block;
-    margin-top: -21vh;
-    margin-left: 2vw;
+    top: -.5vh;
+    left: 1.5vh;
     position: relative;
     background: white;
     font-size: x-large;
-    top:4vh;
-    width: 10vw;
+    
+    width: 6vh;
     height: 4vh;
     text-align: center;
     padding-top: 15px;
     background: black;
     color: white;
     transform: 1s;
-    border: 3px solid white;
-    
+    border: .1px solid white;
+    border-radius: 10px;
+       
     
 }
 .ss{
@@ -57,38 +60,45 @@ padding: 0;
     text-align: center;
     color:#f07008;
     opacity: 0;
+
+
 }
 .sss{
     position: absolute;
-    left:1.2vw;
-    width: .3vw;
+    left:1.2vh;
+    width: .2vh;
     height: 3vh;
     margin-top: -.7vh;
     padding: 1px;
     background-color: #bf7002;
     opacity: 0;
+
+       
 }
 .ssss{
     position: absolute;
-    left:1.3vw;
-    width: .3vw;
+    left:1.3vh;
+    width: .2vh;
     height: 3vh;
     margin-top: -.7vh;
     padding: 1px;
     background-color: #bf7002;
     opacity: 0;
+
+        
 }
 .sssss{
     position: absolute;
-    left:10vw;
-    width: 0vw;
+    left:7vh;
     height: 1.7vh;
     padding: 1px;
-    background: #9f01fb;
+    background: #fd0303;
     border-radius: 8px;
-    box-shadow: 0 0 20px #9f01fb;
+    box-shadow: 0 0 20px #fd0303;
     opacity: 0;
     transition: .5s;
+    width: 0vh;
+       
 }
 
 .saber1-container{
@@ -106,14 +116,14 @@ padding: 0;
     position: absolute;
     width: 5in;
     .s{
-        color: #9f01fb;
-        text-shadow: 0 0 10px #9f01fb;
-        box-shadow: 0 0 30px #9f01fb;
-        transform: scale(1.5);
+        color: #fd0303;
+        text-shadow: 0 0 10px #fd0303;
+        box-shadow: 0 0 30px #fd0303;
+        transform: scale(1.3);
     }
     .ss{
-        left:1vw;
-        width: 7vw;
+        left:0vh;
+        width: 5vh;
         height: .5vh;
         border: 10px solid black;
         outline: 2px solid white;
@@ -121,18 +131,26 @@ padding: 0;
         opacity: 1;
     }
     .sss{
-        left:7.5vw;
+        left:4.8vh;
         opacity: 1;
     }
     .ssss{
-        left:8.5vw;
+       left:5.5vh;
         opacity: 1;
     }
     .sssss{
-        width: 40vw;
+        width: 30vh;
         height: 1.7vh;
         opacity: 1;
     }
+}
+@media screen and (min-width:768px){
+    .blade{
+    left: 18vh;
+}
+.s{
+    left: 4vh;
+}
 }
 `
 export default Saber5

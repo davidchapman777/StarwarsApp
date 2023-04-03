@@ -10,9 +10,15 @@ import Saber7 from "./Saber7"
 import Saber8 from './Saber8'
 
 const Sidebar = () => {
-    
+    const [sidebar, setSidebar] = useState(false)
+    const toggleSidebar = () => {
+        setSidebar(!sidebar)
+    }
     return (
         <Wrapper>
+            <button className="button" onClick={toggleSidebar}>||||</button>
+            {sidebar &&
+            <div className="sabers">
             <Saber1 />
             <Saber2 />
             <Saber3 />
@@ -21,37 +27,52 @@ const Sidebar = () => {
             <Saber6 />
             <Saber7 />
             <Saber8 />
-            
+            <button className="close" onClick={toggleSidebar}>X</button>    
+            </div>
+            }
         </Wrapper>
   )
 }
 
 const Wrapper = styled.div`
-top:23vh;
-border: 4px solid black;
-position: relative;
-position: fixed;
-height: 100%;
-width: 20vw;
-margin-top:-1vh;
-background-color: #f07008;
-display: grid;
-z-index: 1;
-/* @media screen and (min-width: 500px){
-    width: 25%;
+
+.button{
+    position: absolute;
+    font-size: 5vh;
+    z-index: 1;
+    background-color: black;
+    color: white;
+    border: .1vw solid white;
+    padding:1vh;
+    left: 1vh;
+    border-radius: 10px;
+    transform: rotate(90deg);
+    top: 21vh;
 }
-@media screen and (min-width: 700px){
-    width: 19%;
+.sabers{
+    top:21.5vh;
+    border: 4px solid black;
+    position: relative;
+    position: fixed;
+    height: 100%;
+    width: 15vh;
+    margin-top:-1vh;
+    background-image:linear-gradient(to bottom, #03fd03,#f07008);
+    display: grid;
+    z-index: 1;
 }
-@media screen and (min-width: 900px){
-    width: 15%;
+.close{
+    position: absolute;
+    background: black;
+    color: white;
+    border: .1vw solid white;
 }
-@media screen and (min-width: 1100px){
-    width: 12%;
+@media screen and (min-width:768px){
+.sabers{
+    top: 16.5vh;
+    width: 20vh;
 }
-@media screen and (min-width: 1300px){
-    width: 10%;
-} */
+}
 
 `
 export default Sidebar
