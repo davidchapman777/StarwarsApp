@@ -66,7 +66,7 @@ const Wrapper = styled.div`
     background: black;
     color: white;
     border: .1vw solid white;
-    font-size: 3vh;
+    font-size: 1.7vh;
 }
 @media screen and (min-width:768px){
 .sabers{
@@ -78,6 +78,9 @@ const Wrapper = styled.div`
 }
 }
 @media screen and (max-width:850px) and (orientation:landscape){
+.button{
+font-size: 9vh;
+}
 .sabers{
     width: 30vh;
 }

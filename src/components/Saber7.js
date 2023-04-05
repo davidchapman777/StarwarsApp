@@ -24,7 +24,7 @@ padding: 0;
 top: -18vh;
 .blade{
     position: absolute;
-    left: 13vh;
+    left: 9vh;
     top: 1vh;
 }
 .s{

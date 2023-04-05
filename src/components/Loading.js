@@ -14,20 +14,20 @@ const Loading = () => {
 
 const Wrapper = styled.div`
 div{
-    margin-top: 40vh;
-    margin-left: 20.8vw;
-    width: 79%;
-    
+   margin: auto;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   position: fixed;
 }
-
 img{
-    display: flex;
-    
-    position: relative;
-    width: 40vw;
-    height: 40vh;
+    position:absolute;
     margin: auto;
-    
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
 }
 h1{
     border-radius: 100px;
@@ -35,11 +35,19 @@ h1{
     color: black;
     position: relative;
     margin: auto;
-    padding: 2vw;
+    width: 140px;
+    left: 0;
+    right: 0;
+    padding: 5px;
     box-shadow: 0 0 5vw #3ffd00;
     text-align: center;
-    width: 15vw;
-    
+    top: 65%;
+
+}
+@media screen and (max-width:850px) and (orientation:landscape){
+    h1{
+        top: 83%;
+    }
 }
 `
 
