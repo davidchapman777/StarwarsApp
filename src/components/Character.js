@@ -5,60 +5,102 @@ import {FaJediOrder} from 'react-icons/fa'
 const Character = ({name, height, mass, gender }) => {
   return (
     <Wrapper>
-      <div>
-                <h1></h1>
-                <h1><span>NAME : </span> {name}</h1>
-                <h1><span>HEIGHT : </span>{height}</h1>
-                <h1><span>MASS : </span>{mass}</h1>
-                <h1><span>GENDER : </span>{gender}</h1>
-                <p><FaJediOrder/></p>
+      <div className='container'>
+                <div className='content'><span>NAME :  </span><br className='br1'/>{name}</div>
+                <div className='content'><span>HEIGHT : </span><br className='br1'/>{height}</div>
+                <div className='content'><span>MASS : </span><br className='br1'/>{mass}</div>
+                <div className='content'><span>GENDER : </span><br className='br1'/>{gender}</div>
+                <div className='logo'><FaJediOrder/></div>
            </div>
     </Wrapper>
   )
 }
 
 const Wrapper = styled.div`
-  div{
+position: relative;
+top: 30vh;
+margin-bottom: 8vh;
+  .container{
     position: relative;
-    background-color: black;
-    opacity:.5;
     height: 30vh;
-    width: 30vw;
-    margin-top: 25vh;
-    margin-left:32vw;
-    
+    width: 30vh;    
     text-align: center;
     border-radius: 5%;
     border:3px solid white;
     transition: .5s;
-  }
-
-  h1{
-    height: 3.35vh;
-    font-size: x-large;
     margin: auto;
-    color: white;
-    padding-top: .09in;
-    overscroll-behavior: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    columns: 1;
   }
-
-  p{
+  span{
+    color: #04fd04;
+    font-size: 2vh;
+    font-style: oblique;
+  }
+  .content{
+    position: relative;
+    color: white;
+    height: 6vh;
+    width: 14vh;
+    margin: auto;
+    top: 1vh;
+  }
+  .logo{
     transition: .5s;
     color:white;
-    font-size: .001rem;
+    font-size: .0001vh;
+    position: absolute;
+    bottom: -8vh;
+    margin: auto;
+    left: 0;
+    right: 0;
   }
-  div:hover{
+
+  .container:hover{
     transform: scale(1.2) rotate(-20deg);
     opacity: 1;
-    span{
-        color: #04fd04;
-        text-shadow:0 0 10px #fff;
+    background-image: linear-gradient(to bottom, #0546f9, #01076f, black);
+    .content{
+      color: #04fd04;
+      text-shadow:0 0 10px #fff;
     }
-    p{
-        display: block;
-        font-size: 10rem;
-        color: #04fd04;
+    .logo{
+      display: block;
+      font-size: 11vh;
+      color: #04fd04;
     }
+  }
+  @media screen and (min-width:768px){
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: relative;
+    height: 40vh;
+  .container{
+   
+  }
+  }
+  @media screen and (max-width:850px) and (orientation: landscape){
+    margin-bottom: 10vh;
+    .br1{
+      display: none;
+    }
+  .container{
+    height: 38vh;
+    width: 40vh;
+    margin-bottom: 10vh;
+    font-size: 3vh;
+  }
+  .content{
+    width: 40vh;
+    margin-bottom: 1vh;
+  }
+  }
+  @media screen and (min-width:992px){
+  
   }
 `
 

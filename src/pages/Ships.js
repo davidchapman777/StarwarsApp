@@ -16,7 +16,8 @@ const Ships = () => {
   )
 }
   return (
-      <Wrapper>
+    <Wrapper>
+          <div className='div1'></div>
           <div>
             {ship.map((s) => {
               return <Ship key={s.id}{...s} />
@@ -27,14 +28,33 @@ const Ships = () => {
   }
 
 const Wrapper = styled.div`
-background-image: url(${Pic});
-background-position: center;
-background-attachment: fixed;
-background-repeat: no-repeat;
-background-size: cover;
-overflow: hidden;
-margin-left: 1in;
-margin-top: 1in;
+
+padding-bottom: 30vh;
+.div1{
+    position: fixed;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-image: url(${Pic});
+    background-position: center;
+    background-size:cover ;
+
+}
+@media screen and (min-width:768px){
+columns: 2;
+
+}
+@media screen and (max-width:850px) and (orientation: landscape){
+columns: 3;
+height: 140vh;
+
+}
+@media screen and (min-width:992px){
+columns: 3;
+height: 140vh;
+}
 
 
 `

@@ -8,59 +8,101 @@ import { IoMdPlanet } from "react-icons/io";
 const Planet = ({name, diameter, climate, population, terrain}) => {
     return (
       <Wrapper>
-        <div>
-                <h1><span>PLANET :</span> {name}</h1>
-                <h1><span>DIAMETER :</span> {diameter}</h1>
-                <h1><span>CLIMATE :</span> {climate}</h1>
-                <h1><span>POPULATION :</span> {population}</h1>
-                <h1><span>TERRAIN :</span> {terrain}</h1>
-                <p><IoMdPlanet/></p>
-        </div>
-      </Wrapper>
+      <div className='container'>
+                <div className='content'><span>NAME : </span> <br className='br1'/>{name}</div>
+                <div className='content'><span>DIAMETER : </span><br className='br1'/>{diameter}</div>
+                <div className='content'><span>CLIMATE : </span><br className='br1'/>{climate}</div>
+                <div className='content'><span>POPULATION : </span><br className='br1'/>{population}</div>
+                <div className='content'><span>TERRAIN : </span><br className='br1'/>{terrain}</div>
+                <div className='logo'><IoMdPlanet/></div>
+           </div>
+    </Wrapper>
   )
 }
 const Wrapper = styled.div`
-
-div{
+position: relative;
+top: 30vh;
+margin-bottom: 8vh;
+  .container{
     position: relative;
-    background-color: black;
-    opacity:.5;
-    height: 30vh;
-    width: 30vw;
-    margin-top: 25vh;
-    margin-left:32vw;
     
+    height: 30vh;
+    width: 30vh;    
     text-align: center;
     border-radius: 5%;
     border:3px solid white;
     transition: .5s;
-  }
-
-  h1{
-    height: 3.35vh;
-    font-size: x-large;
     margin: auto;
-    color: white;
-    padding-top: .09in;
-    overscroll-behavior: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    columns: 1;
   }
-  p{
+  span{
+    color: #04fd04;
+    font-size: 2vh;
+    font-style: oblique;
+  }
+  .content{
+    position: relative;
+    color: white;
+    height: 6vh;
+    width: 14vh;
+    margin: auto;
+    top: 1vh;
+    margin-bottom: -1vh;
+  }
+  .logo{
     transition: .5s;
     color:white;
-    font-size: .001rem;
+    font-size: .0001vh;
+    position: absolute;
+    bottom: -10vh;
+    margin: auto;
+    left: 0;
+    right: 0;
   }
-  div:hover{
+
+  .container:hover{
     transform: scale(1.2) rotate(-20deg);
     opacity: 1;
-    span{
-        color: #04fd04;
-        text-shadow:0 0 10px #fff;
+    background-image: linear-gradient(to bottom, #0546f9, #01076f, black);
+    .content{
+      color: #04fd04;
+      text-shadow:0 0 10px #fff;
     }
-    p{
-        display: block;
-        font-size: 10rem;
-        color: #04fd04;
+    .logo{
+      display: block;
+      font-size: 11vh;
+      color: #04fd04;
     }
+  }
+  @media screen and (min-width:768px){
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: relative;
+    height: 40vh;
+  .container{
+   
+  }
+  }
+  @media screen and (max-width:850px) and (orientation: landscape){
+    margin-bottom: 10vh;
+    .br1{
+      display: none;
+    }
+  .container{
+    height: 38vh;
+    width: 40vh;
+    margin-bottom: 10vh;
+    font-size: 3vh;
+  }
+  .content{
+    width: 40vh;
+    margin-bottom: 1vh;
+  }
   }
 `
 export default Planet

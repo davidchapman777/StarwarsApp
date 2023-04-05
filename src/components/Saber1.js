@@ -33,7 +33,6 @@ padding: 0;
     position: relative;
     background: white;
     font-size: x-large;
-    
     width: 6vh;
     height: 4vh;
     text-align: center;
@@ -43,8 +42,6 @@ padding: 0;
     transform: 1s;
     border: .1px solid white;
     border-radius: 10px;
-       
-    
 }
 .ss{
     position: absolute;
@@ -59,8 +56,6 @@ padding: 0;
     text-align: center;
     color:#f07008;
     opacity: 0;
-
-
 }
 .sss{
     position: absolute;
@@ -71,8 +66,6 @@ padding: 0;
     padding: 1px;
     background-color: #bf7002;
     opacity: 0;
-
-       
 }
 .ssss{
     position: absolute;
@@ -83,8 +76,6 @@ padding: 0;
     padding: 1px;
     background-color: #bf7002;
     opacity: 0;
-
-        
 }
 .sssss{
     position: absolute;
@@ -97,9 +88,7 @@ padding: 0;
     opacity: 0;
     transition: .5s;
     width: 0vh;
-       
 }
-
 .saber1-container{
     position: absolute;
     top: .2in;
@@ -108,8 +97,6 @@ padding: 0;
     height: .1in;
     padding-bottom: 10px;
     transition: .5s;
-    
-
 }
 .saber1-container:hover{
     position: absolute;
@@ -149,6 +136,47 @@ padding: 0;
 }
 .s{
     left: 4vh;
+}
+}
+@media screen and (max-width:850px) and (orientation:landscape){
+left: 2vh;
+.sssss{
+    left: 20vh;
+}
+.s{
+    font-size: 4vh;
+    padding-top: 0;
+    padding: 1vh;
+}
+.saber1-container:hover{
+    position: absolute;
+    width: 5in;
+    
+    .ss{
+        left:0vh;
+        width: 15vh;
+        height: 1vh;
+        border: 1.9vh solid black;
+        color: silver;
+        opacity: 1;
+        border-radius: 5px;
+    }
+    .sss{
+        left:13vh;
+        height: 5.9vh;
+        top: -.5vh;
+        width: .7vh;
+    }
+    .ssss{
+       left:15.5vh;
+       height: 5.9vh;
+       top: -.5vh;
+       width: .7vh;
+    }
+    .sssss{
+        width: 60vh;
+        height: 3vh;
+    }
 }
 }
 `

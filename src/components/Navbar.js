@@ -34,7 +34,7 @@ left: 0;
 right: 0;
 top: 0;
 height: 20vh;
-background-image:linear-gradient(to right, #03f703,#fc7404) ;
+background-image:linear-gradient(to right, #03f703,#fc7404, black) ;
 border: .2rem solid black;
 position: fixed;
 z-index: 1;
@@ -86,13 +86,13 @@ position: absolute;
 width: 20vh;
 height:20vh ;
 top: 0vh;
+left: 2vh;
 }
 
 a:hover{
   
   box-shadow: 6px 6px black;
 }
-
 @media screen and (min-width:768px){
   height: 15vh;
   .div2{
@@ -106,6 +106,17 @@ a:hover{
   }
   img{
     top: -3vh;
+  }
+}
+@media screen and (max-width:850px) and (orientation:landscape){
+  .link{
+    width: 30vh;
+    padding-bottom:3vh;
+  }
+  img{
+    height: 25vh;
+    width: 25vh;
+    top: -5vh;
   }
 }
 @media screen and (min-width:992px){

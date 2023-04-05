@@ -37,7 +37,7 @@ const Sidebar = () => {
 const Wrapper = styled.div`
 
 .button{
-    position: absolute;
+    position: fixed;
     font-size: 5vh;
     z-index: 1;
     background-color: black;
@@ -57,7 +57,7 @@ const Wrapper = styled.div`
     height: 100%;
     width: 15vh;
     margin-top:-1vh;
-    background-image:linear-gradient(to bottom, #03fd03,#f07008);
+    background-image:linear-gradient(to bottom, #03fd03,#f07008, black);
     display: grid;
     z-index: 1;
 }
@@ -66,13 +66,21 @@ const Wrapper = styled.div`
     background: black;
     color: white;
     border: .1vw solid white;
+    font-size: 3vh;
 }
 @media screen and (min-width:768px){
 .sabers{
     top: 16.5vh;
     width: 20vh;
 }
+.button{
+    top: 16vh;
 }
-
+}
+@media screen and (max-width:850px) and (orientation:landscape){
+.sabers{
+    width: 30vh;
+}
+}
 `
 export default Sidebar

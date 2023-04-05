@@ -152,5 +152,46 @@ top: -6vh;
     left: 4vh;
 }
 }
+@media screen and (max-width:850px) and (orientation:landscape){
+left: 2vh;
+.sssss{
+    left: 20vh;
+}
+.s{
+    font-size: 4vh;
+    padding-top: 0;
+    padding: 1vh;
+}
+.saber1-container:hover{
+    position: absolute;
+    width: 5in;
+    
+    .ss{
+        left:0vh;
+        width: 15vh;
+        height: 1vh;
+        border: 1.9vh solid black;
+        color: silver;
+        opacity: 1;
+        border-radius: 5px;
+    }
+    .sss{
+        left:13vh;
+        height: 5.9vh;
+        top: -.5vh;
+        width: .7vh;
+    }
+    .ssss{
+       left:15.5vh;
+       height: 5.9vh;
+       top: -.5vh;
+       width: .7vh;
+    }
+    .sssss{
+        width: 60vh;
+        height: 3vh;
+    }
+}
+}
 `
 export default Saber3
